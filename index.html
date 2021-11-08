@@ -3,6 +3,7 @@
     <link rel="stylesheet" href="index.css">
     <link rel="apple-touch-icon" href="app-ico.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
 </head>
 <body>
 
@@ -12,6 +13,56 @@
 </div>    
 
 <div id="spacer"></div>
+<div id="mySidenav" class="sidenav">
+    <div id="wipbadge"><img width="32" style="vertical-align:middle" src="icons/underconstruction.png"><span>WIP!</span></div>
+
+    <p id="pill">description</p>
+
+    <span class="iconify" id="list" data-icon="mdi:clipboard-list" onclick="list()">checklist</span>
+    <span class="iconify" id="pref"data-icon="mdi:account-clock" onclick="pref()">preferences</span>
+    <span class="iconify" id="info" data-icon="mdi:information" onclick="info()">info</span>
+    
+    <div id="listSection" > <!--here is the section for listitems-->
+        <p>Optionally check off which fish you've already caught,
+           making it easier to tell which fish you still need to find!</p>
+        <ftemplate id="checkboxTemplate">
+            <div id="fishcheck">
+
+                <input type="checkbox" id="accept">
+                <img class="fishico" src="icons/fish/anchovy.webp">
+                <span class="fishname">FishName</span>
+            </div>
+        </template>
+    </div>
+    
+    <div id="prefSection" >     <!--here is the section for preferences-->
+        Here, you can configure user preferences.<br>
+        Meteonook seed:
+        <input type="text" id="fname"><br>
+        <span><span class="iconify" data-icon="mdi:cookie"></span> Clear cookies<br></span>
+        <span onclick="window.open('https:/\/github.com/shawnshyguy/Daily-Catch/issues');"><span class="iconify" data-icon="mdi:bug"></span> File issue on GitHub</span>
+
+    </div>
+    <div id="infoSection">      <!---------here is my autobiography--------->
+        <p>View project on <span id="isBlue" onclick="window.open('https:/\/github.com/shawnshyguy/daily-catch')"><span class="iconify" data-icon="mdi:github"></span> GitHub</span>!</p>
+        <img src="self-portrait.jpg">
+        <h2>Shawn</h2>
+        <p>Hi! I made this tool because I wanted a simple way to know
+           what fish I could catch to complete the 
+           <span id="isBlue">Critterpedia</span>. I'm also using it
+           as a way to brush up on my JavaScript. If you have any suggestions, want
+           to reach out or anything else, reach me through one of these:<br>
+           <span id="isBlue" onclick="window.open('https:/\/github.com/shawnshyguy')"><span class="iconify" data-icon="mdi:github"></span> GitHub</span>, 
+           <span id="isBlue" onclick="window.open('https:/\/twitter.com/Shawnsg_')"><span class="iconify" data-icon="mdi:twitter"></span> Twitter</span>, or 
+           <span id="isBlue" onclick="window.open('https:/\/discord.com/users/142762426931085312')"><span class="iconify" data-icon="mdi:discord"></span> Discord</span>.
+
+
+
+        </p>
+    </div>
+</div>
+
+<div id="opensidenav"><span class="iconify" data-icon="mdi:tune-vertical" onclick="toggleNav()">⚙️</span></div>
 
 <template id="fishTemplate">
     <div id="fish">
