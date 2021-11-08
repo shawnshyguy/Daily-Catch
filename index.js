@@ -1,6 +1,7 @@
 "use strict";
 window.addEventListener('load', onLoaded, false);
 
+
 //change background color depending on time of day
 var weather = 0;
 var today = new Date();
@@ -79,3 +80,66 @@ function onLoaded(_event)
         return newFish;
     }
 };
+
+//--------------seperator :)---------------\\
+var toggled = 1
+var listSelect = "#F68900" //highlighted color, orange
+var prefSelect = "#F5F0C2" //nonhighlighted color, tan-ish
+var infoSelect = "#F5F0C2"
+function currentHighlightedAction() {
+    document.getElementById("list").style.color = listSelect;
+    document.getElementById("pref").style.color = prefSelect;
+    document.getElementById("info").style.color = infoSelect;
+    
+}
+
+function list() {
+    listSelect = "#F68900";
+    prefSelect = "#F5F0C2";
+    infoSelect = "#F5F0C2";
+    currentHighlightedAction();
+    document.getElementById("pill").innerHTML = "Collection";
+    document.getElementById("pill").style.transform = "translate(-55px, 55px)";
+    document.getElementById("listSection").style.transform = "translateY(130px)";
+    document.getElementById("prefSection").style.transform = "translateY(-2000px)";
+    document.getElementById("infoSection").style.transform = "translateY(-2000px)";
+}
+function pref() {
+    listSelect = "#F5F0C2";
+    prefSelect = "#F68900";
+    infoSelect = "#F5F0C2";
+    currentHighlightedAction();
+    document.getElementById("pill").innerHTML = "Preferences";
+    document.getElementById("pill").style.transform = "translate(0px, 55px)";
+    document.getElementById("listSection").style.transform = "translateY(-2000px)";
+    document.getElementById("prefSection").style.transform = "translateY(0px)";
+    document.getElementById("infoSection").style.transform = "translateY(-2000px)";
+
+}
+function info() {
+    listSelect = "#F5F0C2";
+    prefSelect = "#F5F0C2";
+    infoSelect = "#F68900";
+    currentHighlightedAction();
+    document.getElementById("pill").innerHTML = "About";
+    document.getElementById("pill").style.transform = "translate(54px, 55px)";
+    document.getElementById("listSection").style.transform = "translateY(-2000px)";
+    document.getElementById("prefSection").style.transform = "translateY(-2000px)";
+    document.getElementById("infoSection").style.transform = "translateY(-200px)";
+
+}
+//------------------------:)
+function toggleNav() {
+    if (toggled == 0) {
+    document.getElementById("mySidenav").style.height = "95%";
+    document.getElementById("wipbadge").style.opacity = "1";
+    document.getElementById("mySidenav").style.boxShadow = "0px 0px 0px 58px rgba(0,0,0,0.4)";
+    list()
+    toggled = 1;
+  } else {
+    document.getElementById("mySidenav").style.height = "0px";
+    document.getElementById("wipbadge").style.opacity = "0";
+    document.getElementById("mySidenav").style.boxShadow = "none";
+    toggled = 0
+    }
+} 

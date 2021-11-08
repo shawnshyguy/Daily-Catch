@@ -9,6 +9,7 @@
 body {
     font-family: acSans;
     color: #877359;
+    /*scrollbar-color: #F5CB47 #00000000*/; /*cant get to work under firefox, apparently broken in chrome, so not something high-priority but would be cute to have eventually*/
 }
 
 h1 {font-family: bigSans;margin:0}
@@ -26,7 +27,81 @@ div {
 
 #spacer{height:120px;opacity:0%}
 
-div:nth-child(6) {border-radius:20px 20px 0px 0px;}
+div:nth-child(8) {border-radius:20px 20px 0px 0px;}
 div:last-child {border-radius: 0px 0px 20px 20px;}
 
 .fishuntil {color:#CDC6B0}
+
+#opensidenav {
+    background-color:#DEAE64;
+    position:fixed;
+    bottom:20;
+    right:0;
+    font-size:200%;
+    padding:10px;
+    box-shadow:none;
+    border-radius:25px 0px 0px 25px;
+    z-index: 100 /*we always want this on top*/
+}
+
+.sidenav {
+    height: 0; /* 100% Full-height */
+    width: 95%; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    bottom: 2.5%; /* Stay at the top */
+    right: 2.5%;
+    background-color: #fff9e3; /* Black*/ /* Disable horizontal scroll */
+    padding-top: 0px; /* Place content 60px from the top */
+    transition: 0.4s; /* 0.5 second transition effect to slide in the sidenav */
+    background-image:url(icons/storageheader.png);
+    background-repeat:repeat-x;
+    background-size: 270px;
+    border-radius:25px;  
+    font-family: bigSans; 
+    user-select: none;
+  }
+.sidenav > div, #fishcheck{box-shadow:none!important;}
+.sidenav>.iconify {
+    font-size:250%;
+    background-color: #fff9e3;
+    color:#F5F0C2;
+    padding:8px;
+    border-radius:25px;
+    margin:-4px;
+    position:relative;
+    top:55px;
+    z-index:-1;
+    
+}
+#pill,#wipbadge {
+    margin:auto;
+    width:fit-content;
+    z-index:1;
+    background-color:#F68900;
+    color:#fff9e3;
+    padding: 0 10 0 10;
+    font-size:smaller;
+    border-radius:25px;
+}
+#wipbadge {
+    position:relative;
+    vertical-align:middle;
+    font-size:120%;
+    top: 5;
+    opacity: 0;
+
+}
+
+#listSection {
+    transform:translateY(130px);
+}
+#prefSection > .iconify, #infoSection > .iconify {
+    font-size:150%!important; /*this isn't working, and im not too sure why, but the icons are fine enough as-is for now.*/
+    vertical-align:middle;
+}
+#infoSection > img {
+    border-radius:50px;
+    width:30%
+}
+
+#isBlue {color:#38B1CB}

@@ -1,8 +1,8 @@
-# Daily Catch
+# Daily Catch 🎣
 
 Daily catch is an application I built for keeping track of what bugs and fish are out right now for you to catch, as well as other daily tasks available to you in Animal Crossing: New Horizons.
 
-## Roadmap
+## Roadmap 🗺️
 
 There are a few features I definitely want to add:
 
@@ -39,15 +39,16 @@ There's also some lower-priority features that I would like to add to this some 
 - Icons for location
   - I would like to either find, make, or commission icons for the different locations creatures can be found, so that it's less text and more visual information.
 
-If you have any requests, suggestions, ideas, or find any issues, **please open an issue**!
+If you have any requests, suggestions, ideas, or find any issues, **please [open an issue](https://github.com/shawnshyguy/Daily-Catch/issues)**!
 
-If you want to contribute at all, **please feel free to make a PR**!
+If you want to contribute at all, **please feel free to [make a PR](https://github.com/shawnshyguy/Daily-Catch/pulls)**!
 
-## Notes
+## Notes 📝
 
 This project is obviously not affiliated with, or endorsed by Nintendo in any way. Also, this is largely a project I'm using to practice my JavaScript, so I know the code isn't the best (and I could probably do without the `File` in the arrays). If you want to fix or optimize anything here, feel free to do a pull request.
 
-## Credits
+## Credits 📜
 
 <!-- - MeteoNook for weather in background-->
-- Animalcrossing.fandom contributors for seasonality and TOD info
+- [Animal Crossing Wiki](https://animalcrossing.fandom.com/wiki/Animal_Crossing_Wiki) contributors for seasonality and TOD info
+- [Iconify](https://iconify.design/)/[Material Design Icons](https://github.com/Templarian/MaterialDesign) for UI icons
